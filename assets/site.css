@@ -70,6 +70,34 @@ li.card:hover{border-color:var(--brand)}
 .detail h2{margin:0 0 4px; font-size:1.3rem; letter-spacing:-.2px}
 .detail .meta{margin:0 0 14px; font-size:.86rem; color:var(--muted)}
 .detail .meta .free{color:var(--ok); font-weight:700}
+.detail .lede{margin:0 0 14px; font-size:.97rem}
+.detail .lede em{font-style:normal; font-weight:600}
+
+/* Mod bolumleri + etiketler */
+.chips{display:flex; flex-wrap:wrap; gap:7px; margin:0 0 6px}
+.chip{
+  font-size:.75rem; font-weight:700; letter-spacing:.2px; padding:5px 11px;
+  border-radius:999px; color:var(--brand); background:var(--bg); border:1px solid var(--line);
+}
+.mode h3{
+  font-size:1rem; letter-spacing:-.1px; margin:20px 0 8px; padding-top:16px;
+  border-top:1px solid var(--line);
+}
+.detail .body > .mode:first-of-type h3{border-top:0; padding-top:0; margin-top:14px}
+.mode-lead{margin:0 0 12px; font-size:.93rem; color:var(--muted)}
+
+/* Ucretsiz / Pro karsilastirma */
+.tiers{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:0 0 12px}
+@media (max-width:430px){ .tiers{grid-template-columns:1fr} }
+.tier{background:var(--bg); border:1px solid var(--line); border-radius:13px; padding:12px 14px}
+.tier.pro{border-color:var(--brand); background:var(--card)}
+.tier h4{margin:0 0 7px; font-size:.88rem; letter-spacing:.2px; text-transform:uppercase; color:var(--muted)}
+.tier.pro h4{color:var(--brand)}
+.tier ul{list-style:none; padding:0; margin:0}
+.tier li{font-size:.88rem; margin:0 0 4px; padding-left:14px; position:relative}
+.tier li::before{content:"✓"; position:absolute; left:0; top:0; font-size:.78rem; color:var(--ok)}
+.detail .note-left{text-align:left; margin:0}
+
 ul.features{list-style:none; padding:0; margin:0 0 18px}
 ul.features li{position:relative; padding-left:26px; margin:0 0 7px; font-size:.96rem}
 ul.features li::before{

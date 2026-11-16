@@ -3,174 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Harfora — Türkçe Kelime Oyunu Yardımcısı</title>
-<meta name="description" content="Harfora ve Harfora Premium: Türkçe kelime oyunlarında en yüksek puanlı hamleyi bulan Android uygulamaları. Reklamsız, çevrimdışı, TDK anlamıyla.">
+<title>Hasan Tarla — Uygulamalar</title>
+<meta name="description" content="Hasan Tarla tarafından geliştirilen Android ve iOS uygulamaları. Harfora ve Harfora Premium kelime uygulamaları.">
 <link rel="canonical" href="https://hasantarla.github.io/">
 <link rel="icon" href="assets/icon-v1.png" type="image/png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="Harfora — Türkçe Kelime Oyunu Yardımcısı">
-<meta property="og:description" content="Elindeki harfleri yaz, puan sırasına göre en yüksek kelimeleri gör. Reklamsız, çevrimdışı, TDK anlamıyla.">
-<meta property="og:image" content="https://hasantarla.github.io/assets/harfora-v1.png">
+<meta property="og:title" content="Hasan Tarla — Uygulamalar">
+<meta property="og:description" content="Android ve iOS uygulamaları: Harfora ve Harfora Premium.">
 <meta property="og:url" content="https://hasantarla.github.io/">
 <style>
   :root{
     --fg:#0f1d33; --muted:#5b6b83; --bg:#f4f7fb; --card:#ffffff; --line:#e2e9f3;
-    --brand:#1769C4; --brand-dark:#082C6A; --accent:#FFD64A; --ok:#127a4b;
+    --brand:#1769C4; --brand-dark:#082C6A;
   }
   @media (prefers-color-scheme: dark){
-    :root{ --fg:#e8eef7; --muted:#9aa9be; --bg:#0b1220; --card:#131e33; --line:#22314d; --ok:#4ed191; }
+    :root{ --fg:#e8eef7; --muted:#9aa9be; --bg:#0b1220; --card:#131e33; --line:#22314d; }
   }
   *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
   body{
     margin:0; background:var(--bg); color:var(--fg); font-size:17px; line-height:1.6;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
-  main{max-width:720px; margin:0 auto; padding:28px 18px 64px}
+  main{max-width:640px; margin:0 auto; padding:40px 18px 64px}
+  h1{font-size:1.7rem; margin:0 0 4px; letter-spacing:-.3px}
+  .sub{color:var(--muted); margin:0 0 28px; font-size:.95rem}
 
-  /* Hero */
-  header.hero{text-align:center; padding:8px 0 26px}
-  .wordmark{
-    display:inline-block; font-weight:800; font-size:1.9rem; letter-spacing:-.5px;
-    background:linear-gradient(135deg,var(--brand),var(--brand-dark));
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-  }
-  .hero p{color:var(--muted); margin:6px 0 0; font-size:1rem}
-  .hero .accent{
-    display:inline-block; margin-top:14px; padding:6px 14px; border-radius:999px;
-    background:var(--accent); color:#3a2c00; font-weight:700; font-size:.85rem;
-  }
-
-  /* App cards */
   .app{
-    background:var(--card); border:1px solid var(--line); border-radius:18px;
-    overflow:hidden; margin:0 0 22px; box-shadow:0 2px 14px rgba(8,44,106,.06);
+    display:flex; gap:14px; align-items:center; text-decoration:none; color:inherit;
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:14px 16px; margin:0 0 12px; box-shadow:0 2px 12px rgba(8,44,106,.05);
   }
-  .app img.banner{display:block; width:100%; height:auto; aspect-ratio:1024/500; object-fit:cover; border-bottom:1px solid var(--line)}
-  .app .body{padding:18px 18px 20px}
-  .app h2{margin:0 0 4px; font-size:1.28rem; letter-spacing:-.2px}
-  .app .meta{margin:0 0 14px; font-size:.86rem; color:var(--muted)}
-  .app .meta .free{color:var(--ok); font-weight:700}
-  ul.features{list-style:none; padding:0; margin:0 0 18px}
-  ul.features li{
-    position:relative; padding-left:26px; margin:0 0 7px; font-size:.96rem;
-  }
-  ul.features li::before{
-    content:""; position:absolute; left:7px; top:.62em; width:7px; height:7px;
-    border-radius:50%; background:var(--brand);
-  }
-  a.cta{
-    display:flex; align-items:center; justify-content:center; gap:10px;
-    min-height:52px; padding:14px 18px; border-radius:14px; text-decoration:none;
-    font-weight:700; font-size:1rem; color:#fff;
-    background:linear-gradient(135deg,var(--brand),var(--brand-dark));
-  }
-  a.cta.secondary{
-    background:transparent; color:var(--brand); border:2px solid var(--brand);
-  }
-  a.cta:active{transform:translateY(1px)}
-  .note{font-size:.8rem; color:var(--muted); text-align:center; margin:10px 0 0}
+  .app:hover{border-color:var(--brand)}
+  .app img{width:58px; height:58px; border-radius:13px; flex:0 0 auto}
+  .app .txt{flex:1 1 auto; min-width:0}
+  .app .name{font-weight:700; font-size:1.02rem; display:block}
+  .app .desc{color:var(--muted); font-size:.87rem; display:block; margin-top:2px}
+  .app .go{color:var(--brand); font-weight:700; font-size:1.1rem; flex:0 0 auto}
 
-  /* Comparison */
-  section.compare{background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px}
-  section.compare h3{margin:0 0 10px; font-size:1.05rem}
-  table{width:100%; border-collapse:collapse; font-size:.92rem}
-  th,td{text-align:left; padding:9px 6px; border-bottom:1px solid var(--line); vertical-align:top}
-  th{font-weight:600; color:var(--muted); font-size:.82rem; text-transform:uppercase; letter-spacing:.4px}
-  tr:last-child td{border-bottom:none}
-  td:first-child{color:var(--muted); width:44%}
-
-  /* Footer */
-  footer{margin-top:26px; text-align:center; font-size:.88rem; color:var(--muted)}
+  footer{margin-top:28px; text-align:center; font-size:.88rem; color:var(--muted)}
   footer a{color:var(--brand); text-decoration:none}
   footer a:hover{text-decoration:underline}
   footer .links{margin-bottom:10px}
   footer .links a{margin:0 8px; white-space:nowrap}
-  .disclaimer{font-size:.78rem; margin-top:12px; opacity:.85}
 </style>
 </head>
 <body>
 <main>
+  <h1>Hasan Tarla</h1>
+  <p class="sub">Mobil uygulamalar · Android &amp; iOS</p>
 
-  <header class="hero">
-    <span class="wordmark">Harfora</span>
-    <p>Türkçe kelime oyunları için akıllı yardımcı</p>
-    <span class="accent">Reklamsız · Çevrimdışı · TDK anlamı</span>
-  </header>
+  <a class="app" href="harfora/">
+    <img src="assets/icon-v1.png" alt="Harfora uygulama simgesi" width="58" height="58">
+    <span class="txt">
+      <span class="name">Harfora - Kelime Bulucu</span>
+      <span class="desc">Türkçe kelime oyunlarında en yüksek puanlı hamle</span>
+    </span>
+    <span class="go" aria-hidden="true">›</span>
+  </a>
 
-  <!-- 1) Harfora (v1) — birincil -->
-  <article class="app">
-    <img class="banner" src="assets/harfora-v1.png"
-         alt="Harfora - Kelime Bulucu: harfleri gir, puan sırasına göre kelimeleri gör" width="1024" height="500">
-    <div class="body">
-      <h2>Harfora - Kelime Bulucu</h2>
-      <p class="meta"><span class="free">Ücretsiz</span> · Android · Google Play</p>
-      <ul class="features">
-        <li>Harfleri yaz, joker için <strong>*</strong> kullan</li>
-        <li>Puan sırasına göre en yüksek kelimeler</li>
-        <li>Kelimeye uzun bas → TDK anlamı</li>
-        <li>Kelime (Düzen A) ve Scrabble (Düzen B) tahtaları</li>
-        <li>Reklamsız, çevrimdışı, sade arayüz</li>
-      </ul>
-      <a class="cta" href="https://play.google.com/store/apps/details?id=com.ht.harfora.v1&amp;utm_source=website&amp;utm_medium=landing&amp;utm_campaign=harfora_lansman">Google Play'de ücretsiz indir</a>
-      <p class="note">Pro tek seferlik satın alma: sınırsız öneri ve tüm özellikler.</p>
-    </div>
-  </article>
-
-  <!-- 2) Harfora Premium (v2) -->
-  <article class="app">
-    <img class="banner" src="assets/harfora-v2.png"
-         alt="Harfora Premium Kelime Bulucu: gelişmiş kelime çözümleyici" width="1024" height="500">
-    <div class="body">
-      <h2>Harfora Premium Kelime Bulucu</h2>
-      <p class="meta">Android · Google Play · Ayrı uygulama</p>
-      <ul class="features">
-        <li>Yeni nesil, gelişmiş kelime çözümleyici</li>
-        <li>Yenilenen arayüz ve daha hızlı sonuçlar</li>
-        <li>Harfora ile <strong>ayrı</strong> satılır; Pro bir uygulamadan diğerine geçmez</li>
-      </ul>
-      <a class="cta secondary" href="https://play.google.com/store/apps/details?id=com.ht.harfora.v2&amp;utm_source=website&amp;utm_medium=landing&amp;utm_campaign=harfora_lansman">Google Play'de incele</a>
-    </div>
-  </article>
-
-  <!-- 3) Hangisi bana uygun? -->
-  <section class="compare">
-    <h3>Hangisi bana uygun?</h3>
-    <table>
-      <tr><th>&nbsp;</th><th>Harfora</th><th>Premium</th></tr>
-      <tr><td>Ücretsiz kullanım</td><td>Evet (30 ücretsiz üretim)</td><td>Deneme ile</td></tr>
-      <tr><td>Pro satın alma</td><td>Ayrı</td><td>Ayrı</td></tr>
-      <tr><td>Kimin için</td><td>Günlük oyuncu, ilk kez deneyen</td><td>Daha gelişmiş çözümleyici isteyen</td></tr>
-    </table>
-  </section>
+  <a class="app" href="harfora/">
+    <img src="assets/icon-v2.png" alt="Harfora Premium uygulama simgesi" width="58" height="58">
+    <span class="txt">
+      <span class="name">Harfora Premium Kelime Bulucu</span>
+      <span class="desc">Yeni nesil, gelişmiş kelime çözümleyici</span>
+    </span>
+    <span class="go" aria-hidden="true">›</span>
+  </a>
 
   <footer>
     <div class="links">
       <a href="privacy.html">Gizlilik Politikası</a>
       <a href="mailto:hasantarla.apps@gmail.com">İletişim</a>
     </div>
-    <div class="disclaimer">
-      Harfora bağımsız bir yardımcı uygulamadır; herhangi bir oyunun resmî ürünü değildir.
-    </div>
   </footer>
-
 </main>
-
-<script>
-/* Instagram bio gibi kanallardan gelen utm_source degerini Play linklerine tasir.
-   Ornek: /?utm_source=instagram  ->  Play linklerine &utm_source=instagram eklenir. */
-(function () {
-  var src = new URLSearchParams(location.search).get('utm_source');
-  if (!src) return;
-  var links = document.querySelectorAll('a.cta[href*="play.google.com"]');
-  for (var i = 0; i < links.length; i++) {
-    links[i].href = links[i].href.replace('utm_source=website', 'utm_source=' + encodeURIComponent(src));
-  }
-})();
-</script>
-
-<!-- Analitik: Cloudflare Web Analytics veya GoatCounter snippet'ini buraya ekle.
-     GitHub Pages kendi basina ziyaret olcumu vermez. -->
 </body>
 </html>
